@@ -1,0 +1,42 @@
+from tkinter import *
+import datetime
+import time
+from playsound import playsound
+
+def Alarm(set_alarm):
+    while True:
+        time.sleep(1)
+        actual_time = datetime.datetime.now()
+        cur_time = actual_time.strftime("%H:%M:%S")
+        cur_date = actual_time.strftime("%d/%m/%y")
+        msg = "Current Time: "+str(cur_time)
+        print(msg+" "+cur_date)
+        if cur_time == set_alarm:
+            playsound('./ringtones/alarm.wav')
+            break
+
+def get_alarm():
+    alarm_set = f"{hour.get()}:{min.get()}:{sec.get()}"
+    Alarm(alarm_set)
+
+window = Tk()
+window.title("Alarm Clock")
+window.geometry("400x160")
+window.config(bg="#922B21")
+window.resizable(width=False,height=False)
+
+time_format = Label(window, text="Set Time In 24 Hour Format Only!", fg="white", bg="#922B21", font=("Poppins",15)).place(x=20,y=120)
+add_time = Label(window, text="Hr    Min    Sec", font=60, fg="white", bg="black").place(x=210)
+set_your_alarm = Label(window, text="Set Time For Alarm: ", fg="white", bg="#922B21", relief="solid", font=("Helevetica",15,"bold")).place(x=10,y=40)
+
+hour = StringVar()
+min = StringVar()
+sec = StringVar()
+
+hourTime = Entry(window, textvariable= hour, bg="#48C9B0", width=4, font=(20)).place(x=210,y=40)
+minTime = Entry(window, textvariable= min, bg="#48C9B0", width=4, font=(20)).place(x=270,y=40)
+secTime = Entry(window, textvariable= sec, bg="#48C9B0", width=4, font=(20)).place(x=330,y=40)
+
+submit = Button(window, text="Set Your Alarm", fg="black", bg="#D4AC0D", width=15, command=get_alarm, font=(20)).place(x=100,y=80)
+
+window.mainloop()
