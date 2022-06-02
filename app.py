@@ -25,9 +25,9 @@ window.geometry("400x160")
 window.config(bg="#922B21")
 window.resizable(width=False,height=False)
 
-time_format = Label(window, text="Set Time In 24 Hour Format Only!", fg="white", bg="#922B21", font=("Poppins",15)).place(x=20,y=120)
-add_time = Label(window, text="Hr    Min    Sec", font=60, fg="white", bg="black").place(x=210)
-set_your_alarm = Label(window, text="Set Time For Alarm: ", fg="white", bg="#922B21", relief="solid", font=("Helevetica",15,"bold")).place(x=10,y=40)
+time_format = Label(window, text="Set Time In 24 Hour Format Only!", fg="white", bg="#922B21", font=("Poppins",15)).place(x=25,y=120)
+add_time = Label(window, text="  Hr        Min      Sec ", font=90, fg="white", bg="black").place(x=210)
+set_your_alarm = Label(window, text="Set Time For Alarm: ", fg="white", bg="#922B21", relief="solid", font=("Helevetica",12,"bold")).place(x=10,y=41)
 
 hour = StringVar()
 min = StringVar()
