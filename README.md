@@ -4,14 +4,23 @@
 
 >[Python](https://www.python.org/) <br>
 [Tkinter](https://docs.python.org/3/library/tkinter.html) <br>
+[Playsound](https://pypi.org/project/playsound/) <br>
 [Visual Studio Code](https://code.visualstudio.com/) or any other code editor <br>
 [Git](https://git-scm.com/downloads)
 
 <h1>How To Use</h1>
 
-- Please Ensure That You Have Installed Python & Tkinter In Your Device.
+- Please Ensure That You Have Installed Python, Tkinter & Playsound On Your Device.
 
-- To Check The Working Of The Codes, Type `python <file_name>.py` In The Console.
+- Add Your Ringtone File (Use Only Files With `.ico` Extension) In The `Ringtones` Folder & Rewrite The The Ringtone File Name In The Main Code.
+
+- Now Open Your Terminal And Type `python3 app.py` To Start The Alarm CLock Application On Your PC.
+
+<h1>Output</h1>
+
+<p align="center">
+<img width="450" height="190" alt="output" src="./output/output.png">
+</p>
 
 <h2>Discord Server</h2>
 
